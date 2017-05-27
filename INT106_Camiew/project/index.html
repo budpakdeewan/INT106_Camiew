@@ -1,0 +1,199 @@
+<html>
+<head>
+	<title>CAMIEW</title>
+
+	<meta charset = 'utf-8'>
+	<link rel="stylesheet" type="text/css" href="camstyle.css" />
+</head>
+<body style="margin:auto;">
+
+	<div>
+		<center><table id="navigater" ></table></center>
+	</div>
+
+	<div class="slideshow-container">
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">1 / 6</div>
+		<img src="pic/s1.jpg" style="width:100%">
+		<div class="text">Nikon</div>
+	</div>
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">2 / 6</div>
+		<img src="pic/s2.jpg" style="width:100%">
+		<div class="text">Canon</div>
+	</div>
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">3 / 6</div>
+		<img src="pic/s3.jpg" style="width:100%">
+		<div class="text">Sony</div>
+	</div>
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">4 / 6</div>
+		<img src="pic/s4.jpg" style="width:100%">
+		<div class="text">Fuji</div>
+	</div>
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">5 / 6</div>
+		<img src="pic/s5.jpg" style="width:100%">
+		<div class="text">Olympus</div>
+	</div>
+
+	<div class="mySlides animateRight">
+		<div class="numbertext">6 / 6</div>
+		<img src="pic/s6.jpg" style="width:100%">
+		<div class="text">Panasonic</div>
+	</div>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div><br><br><br><br><br>
+	<center><div><span id='title' class="titleStyle"></span><span id='pd' class="product"></span></div></center><br><br>
+	<div id='p1' style="height:750px;"></div>
+	<div id='p2' style="height:750px">
+		<div style="float:left;text-align: left;margin-left: 50px;margin-top: 120px; font-size: 3em; color: white">
+			<p id='titleFocus' class="titleStyle" style="color:white;"></p>
+			<p class="content" id='contentFocus' style="color:white"></p>
+		</div>
+	</div>
+	<div id='p3' style="height:750px">
+		<div style="float:right;text-align: right;margin-right: 50px;margin-top: 175px; font-size: 3em">
+			<p class="titleFocus" id='titleIso' style="color:black"></p>
+			<p class="content" id='contentIso' style="color:black"></p>
+		</div>
+	</div>
+	<div id='p4' style="height:750px">
+		<div style="float:left;text-align: left;margin-left: 50px;margin-top: 120px; font-size: 3em; color: white">
+			<p class="titleStyle" id='titleShutter' style="color:white"></p>
+			<p class="content" id='contentShutter' style="color:white"></p>
+		</div>
+	</div>
+	<div id='p5' style="height:750px">
+		<div style="float:right;text-align: right;margin-right: 50px;margin-top: 175px; font-size: 3em">
+			<p class="titleStyle" id='titleWifi' style="color:black"></p>
+			<p class="content" id='contentWifi' style="color:black"></p>
+		</div>
+	</div>
+	<div id='p6' style="height:800px">
+		<div style="float:left;text-align: left;margin-left: 50px;margin-top: 120px; font-size: 3em">
+			<p class="titleStyle" id='titlePrice' style="color:black"></p>
+			<p class="content" id='contentPrice' style="color:black"></p>
+		</div>
+		</div>
+
+<script type="text/javascript">
+		var myIndex = 0;
+		var dots = document.getElementsByClassName("dot");
+		var x,xmlhttp,xmlDoc
+		carousel();
+		startWeb();
+
+		function startWeb() {
+			document.getElementById("navigater").className += " menubar";
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange=function() {
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					xmlDoc = this.responseXML;
+					x = xmlDoc.getElementsByTagName("COMPANY");
+					var num = Math.floor(x.length/2)-1;
+					table ="<tr>";
+					for (i = 0; i <x.length; i++) {
+						table += "<td id='"+i+"' onclick='select("+i+")'onmouseover='over("+i+")' onmouseout='out("+i+")'>&nbsp;&nbsp;";
+						table += x[i].getElementsByTagName("COMPNAME")[0].childNodes[0].nodeValue;
+						table += "&nbsp;&nbsp;</td>";
+						if(i==num){
+							table +="<td id='camiew'><b>&nbsp;&nbsp;Camiew&nbsp;&nbsp;</b></td>"
+						}
+					}
+					table += "</tr>";
+				}
+			}
+
+			xmlhttp.open("GET", "pic/camera_log.xml", false);
+			xmlhttp.send();
+			document.getElementById("navigater").innerHTML = table;
+		}
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		      x[i].style.display = "none";
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}
+		    x[myIndex-1].style.display = "block";
+				for (i = 0; i < dots.length; i++) {
+        	dots[i].className = dots[i].className.replace(" active", "");
+    		}
+				dots[myIndex-1].className += " active";
+		    setTimeout(carousel, 3000);
+		}
+
+		function over(i){
+   document.getElementById(i).style.backgroundColor = "black";
+   document.getElementById(i).style.color = "white";
+  }
+
+  function out(i){
+   document.getElementById(i).style.backgroundColor = "white";
+   document.getElementById(i).style.color = "black";
+  }
+		function select(i){
+			var product = x[i].getElementsByTagName('PRODUCT')[0].childNodes[0].nodeValue;
+			document.getElementById("title").innerHTML  = x[i].getElementsByTagName("COMPNAME")[0].childNodes[0].nodeValue+"&nbsp;&nbsp;" ;
+			document.getElementById("pd").innerHTML  = "&nbsp;&nbsp;"+product+"&nbsp;&nbsp;";
+			document.getElementById("p1").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('one')[0].childNodes[0].nodeValue+')';
+			document.getElementById("p1").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p1").style.backgroundPosition  = "center center";
+			document.getElementById("p2").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('two')[0].childNodes[0].nodeValue+')';
+			document.getElementById("p2").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p2").style.backgroundSize  = "cover";
+			document.getElementById("p2").style.backgroundPosition  = "center center";
+			document.getElementById("p3").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('three')[0].childNodes[0].nodeValue+')';
+			document.getElementById("p3").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p3").style.backgroundSize  = "cover";
+			document.getElementById("p3").style.backgroundPosition  = "center center";
+
+			document.getElementById("p4").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('four')[0].childNodes[0].nodeValue;+')'
+			document.getElementById("p4").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p4").style.backgroundSize  = "cover";
+			document.getElementById("p4").style.backgroundPosition  = "center center";
+			document.getElementById("p5").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('five')[0].childNodes[0].nodeValue;+')'
+			document.getElementById("p5").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p5").style.backgroundSize  = "cover";
+			document.getElementById("p5").style.backgroundPosition  = "center center";
+			document.getElementById("p6").style.backgroundImage = 'url(pic/' + x[i].getElementsByTagName('six')[0].childNodes[0].nodeValue;+')'
+			document.getElementById("p6").style.backgroundRepeat  = "no-repeat";
+			document.getElementById("p6").style.backgroundSize  = "cover";
+			document.getElementById("p6").style.backgroundPosition  = "center center";
+
+			document.getElementById("titleIso").innerHTML = "ISO";
+			document.getElementById("titleFocus").innerHTML = "FOCUS";
+			document.getElementById("titleShutter").innerHTML = "SHUTTER";
+			document.getElementById("titleWifi").innerHTML = "WIFI";
+			document.getElementById("titlePrice").innerHTML = "PRICE";
+			document.getElementById("contentFocus").innerHTML = x[i].getElementsByTagName("FOCUS")[0].childNodes[0].nodeValue;
+			document.getElementById("contentIso").innerHTML = x[i].getElementsByTagName("ISO")[0].childNodes[0].nodeValue;
+			document.getElementById("contentShutter").innerHTML = x[i].getElementsByTagName("SHUTTER")[0].childNodes[0].nodeValue;
+			document.getElementById("contentWifi").innerHTML = x[i].getElementsByTagName("WIFI")[0].childNodes[0].nodeValue;
+			console.log(x[i].getElementsByTagName("WIFI")[0].childNodes[0].nodeValue);
+			document.getElementById("contentPrice").innerHTML = x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+			console.log(x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue);
+		}
+	</script>
+
+</body>
+</html>

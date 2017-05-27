@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CAMERA>
+	<COMPANY>
+		<COMPNAME>Nikon</COMPNAME>
+		<PRODUCT>Nikon D7500</PRODUCT>
+		<FOCUS><![CDATA[จุดโฟกัส 51 จุด พร้อมทั้งรองรับ<br>การโฟกัสแบบ Group Focus อีกด้วย]]></FOCUS>
+		<ISO>ช่วงค่า ISO ตั้งแต่ 100 ถึง 51200</ISO>
+		<SHUTTER>Speed Shutter 1/8000 ถึง 30 วินาที</SHUTTER>
+		<WIFI><![CDATA[มี Bluetooth และ Wi-Fi <br>รองรับการใช้งานของ SnapBridge]]></WIFI>
+		<PRICE>43,000฿</PRICE>
+		<one>nikon_1.jpg</one>
+		<two>n2.jpg</two>
+		<three>n3.jpg</three>
+		<four>n4.jpg</four>
+		<five>n5.jpg</five>
+		<six>n6.jpg</six>
+	</COMPANY>
+	<COMPANY>
+		<COMPNAME>Canon</COMPNAME>
+		<PRODUCT>Canon EOS M3</PRODUCT>
+		<FOCUS><![CDATA[Hybrid CMOS AF III<br>ระบบโฟกัส 49 จุด]]></FOCUS>
+		<ISO><![CDATA[มี Native ISO ที่ 100 ถึง 12,800<br> สามารถดันขึ้นไปถึง 25,600]]></ISO>
+		<SHUTTER>Speed Shutter 1/4000 ถึง 30วินาที</SHUTTER>
+		<WIFI>มี WiFi และ NFC ในตัว</WIFI>
+		<PRICE>17900฿</PRICE>
+		<one>cannon_01.jpg</one>
+		<two>canon_2.jpg</two>
+		<three>canon_n3.jpg</three>
+		<four>canon_4.jpg</four>
+		<five>canon_5.jpg</five>
+		<six>canon_6.jpg</six>
+	</COMPANY>
+	<COMPANY>
+			<COMPNAME>Sony</COMPNAME>
+			<PRODUCT>Sony a6000</PRODUCT>
+			<FOCUS><![CDATA[Fast Hybrid AF <br>(AF ตรวจจับระยะห่าง/AF ตรวจจับความเปรียบต่าง)]]></FOCUS>
+			<ISO>ตั้งแต่ 100 ถึง 25600</ISO>
+			<SHUTTER>Speed Shutter 1/4000 ถึง 30 วินาที</SHUTTER>
+			<WIFI>มี Wi-Fi พร้อม NFC One-touch</WIFI>
+			<PRICE>27,990฿</PRICE>
+			<IMAGE>
+				<one>sony1.png</one>
+				<two>sony2.jpg</two>
+				<three>sony3.jpg</three>
+				<four>sony4.jpg</four>
+				<five>sony5.jpg</five>
+				<six>sony6.jpg</six>
+			</IMAGE>
+		</COMPANY>
+		<COMPANY>
+				<COMPNAME>Fuji</COMPNAME>
+				<PRODUCT>FujiFilm X-Pro2</PRODUCT>
+				<FOCUS><![CDATA[มี 2 แบบ คือ Phase Detection ถึง 169 <br>จุด และ Contrast Detection อีก 273 จุด]]></FOCUS>
+				<ISO><![CDATA[ตั้งแต่ 200 ถึง 12800 <br>สามารถดันขึ้นไปถึง 25600,51200]]></ISO>
+				<SHUTTER><![CDATA[Speed Shutter 1/8000วินาที เมื่อปรับ Shutter<br>ให้เป็นแบบ Electronic Speed Shutter 1/32000วินาที]]></SHUTTER>
+				<WIFI>สามารถส่งภาพผ่าน WI-FI ต่อตรงกับ Smart Phone</WIFI>
+				<PRICE>59,990฿</PRICE>
+				<one>fuji_n1.jpg</one>
+				<two>fuji_2.jpg</two>
+				<three>fuji_3.jpg</three>
+				<four>fuji_4.jpg</four>
+				<five>fuji_5.jpg</five>
+				<six>fuji_6.jpg</six>
+			</COMPANY>
+			<COMPANY>
+				<COMPNAME>Olympus</COMPNAME>
+				<PRODUCT>OM-D EM-10</PRODUCT>
+				<FOCUS><![CDATA[จุดโฟกัส 81 จุด มี Face detection<br>สามารถเอานิ้วแตะหน้าจอเพื่อโฟกัสได้]]></FOCUS>
+				<ISO>ตั้งแต่ 200 ถึง 25600</ISO>
+				<SHUTTER><![CDATA[Speed Shutter 1/4000 วินาที <br>ถึง 60 วินาที วินาที มีโหมด Bulb ให้<br>ใช้ มี Electronic shutter ซึ่งทำให้<br>ถ่ายเร็วสุดได้ 1/16000 วินาที]]></SHUTTER>
+				<WIFI>ส่งรูปเข้ามือถือได้ผ่านแอป Olympus Image Share </WIFI>
+				<PRICE>24,990฿</PRICE>
+				<one>olym1.jpg</one>
+				<two>olym2.jpg</two>
+				<three>olym3.jpg</three>
+				<four>olym4.jpg</four>
+				<five>olym5.jpg</five>
+				<six>olym6.jpg</six>
+			</COMPANY>
+			<COMPANY>
+				<COMPNAME>Panasonic</COMPNAME>
+				<PRODUCT>Panasonic Lumix G85</PRODUCT>
+				<FOCUS><![CDATA[มีจุดโฟกัสอยู่ที่ 49 จุด<br>เป็นแบบ Contrast Detection]]></FOCUS>
+				<ISO>ตั้งแต่ 200 ถึง 25600</ISO>
+				<SHUTTER><![CDATA[Speed Shutter 1/4000 วินาที มีโหมด<br> Bulb เราสามารถใช้ Electronic shutter <br>เพื่อเพิ่มความเร็วชัตเตอร์ไปถึง 1/16000<br> วินาทีได้]]></SHUTTER>
+				<WIFI>มี WI-FI ในตัว</WIFI>
+				<PRICE>37,990฿</PRICE>
+				<one>pana_01.jpg</one>
+				<two>pana_2.jpg</two>
+				<three>pana_3.jpg</three>
+				<four>pana4ver3.jpg</four>
+				<five>pana_5.jpg</five>
+				<six>pana_6.jpg</six>
+			</COMPANY>
+</CAMERA>
